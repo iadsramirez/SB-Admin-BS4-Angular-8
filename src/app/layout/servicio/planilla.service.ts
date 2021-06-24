@@ -478,6 +478,15 @@ export class PlanillaService {
             .pipe(catchError(this.handleError));
     }
 
+
+    generarArchivoAFP(objeto: any): Observable<any> {
+        return this.http.post(this.baseUrl + 'reportes/generar-archivo-afp', objeto).pipe(catchError(this.handleError));
+    }
+
+    generarArchivoISSS(objeto: any): Observable<any> {
+        return this.http.post(this.baseUrl + 'reportes/generar-archivo-isss', objeto).pipe(catchError(this.handleError));
+    }
+
     generarReporteDeducciones(cia: any, anio: any, secuencia: any, tipo: any): Observable<any> {
         return this.http
             .get(this.baseUrl + 'reportes/generar-reporte-deduc/' + cia + '/' + anio + '/' + secuencia + '/' + tipo)
@@ -499,4 +508,8 @@ export class PlanillaService {
     public set setBanderaInicio(valores) {
         this.banderaInicio = valores;
     }
+
+
+
+
 }

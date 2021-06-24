@@ -24,17 +24,26 @@ import { from } from 'rxjs';
 import { AccionNoAfectaPlanillaComponent } from './accion-personal/accion-no-afecta-planilla.component';
 import { CandidatoComponent } from './candidato/form-candidato/candidato-form.component';
 import { ContratacionDirectaComponent } from './contratacion-directa/contratacion-directa.component';
-
+import { ArchivoAfpComponent } from './archivoAFP/archivo-afp/archivo-afp.component';
+import { UiSwitchModule } from 'ngx-ui-switch';
 
 
 
 @NgModule({
-    imports: [NgbModule,
+    imports: [NgbModule,UiSwitchModule.forRoot({
+        size: 'small',
+        color: 'rgb(0, 189, 99)',
+        switchColor: '#80FFA2',
+        defaultBgColor: '#00ACFF',
+        defaultBoColor : '#476EFF',
+        checkedLabel: 'on',
+        uncheckedLabel: 'off'
+      }),
         NgxPaginationModule,
         ReactiveFormsModule,
         AngularFileUploaderModule,
         CommonModule, FormsModule,NgSelectModule,LayoutRoutingModule, TranslateModule, NgbDropdownModule,AutocompleteLibModule],
-    declarations: [ContratacionDirectaComponent,AccionCrearComponent,CandidatoComponent,AccionNoAfectaPlanillaComponent,LayoutComponent, CargaManualComponent,SidebarComponent, HeaderComponent, AccionPersonalComponent, CargarHXComponent, DeduccionesComponent],
+    declarations: [ContratacionDirectaComponent,AccionCrearComponent,CandidatoComponent,AccionNoAfectaPlanillaComponent,LayoutComponent, CargaManualComponent,SidebarComponent, HeaderComponent, AccionPersonalComponent, CargarHXComponent, DeduccionesComponent, ArchivoAfpComponent],
     providers: [{ provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter },
         {provide: DEFAULT_CURRENCY_CODE, useValue: 'USD'}]
 })

@@ -30,6 +30,7 @@ import { AccionNoAfectaPlanillaComponent } from './accion-personal/accion-no-afe
 import { LoginComponent } from '../login/login.component';
 import { CandidatoComponent } from './candidato/form-candidato/candidato-form.component';
 import { ContratacionDirectaComponent } from './contratacion-directa/contratacion-directa.component';
+import { ArchivoAfpComponent } from './archivoAFP/archivo-afp/archivo-afp.component';
 
 const routes: Routes = [
     {
@@ -53,6 +54,7 @@ const routes: Routes = [
             { path: 'capacitaciones', component: CapacitacionesComponent },
             { path: 'emergencias', component: EmergenciasComponent },
             { path: 'cargarHX', component: CargarHXComponent },
+            { path: 'archivoAfp', component: ArchivoAfpComponent },
             { path: 'carga-manual', component: CargaManualComponent },
             { path: 'deduccion-carga', component: DeduccionesComponent },
             { path: 'formPlanilla', loadChildren: () => import('./formPlanilla/form-module-planilla/form-module-planilla.module').then((m) => m.FormModulePlanillaModule) },

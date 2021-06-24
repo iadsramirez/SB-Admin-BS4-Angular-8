@@ -10,7 +10,7 @@ import { AuthGuard } from './shared';
 import { LanguageTranslationModule } from './shared/modules/language-translation/language-translation.module';
 import {NgbModule,NgbDate} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
+//import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { StoreModule } from '@ngrx/store';
         BrowserAnimationsModule,
         HttpClientModule,
         LanguageTranslationModule,
-        AppRoutingModule,NgbModule,FormsModule,ReactiveFormsModule, StoreModule.forRoot({}, {})
+        AppRoutingModule,NgbModule,FormsModule,ReactiveFormsModule,
+        //StoreModule.forRoot({}, {})
     ],
     declarations: [AppComponent],
     providers: [AuthGuard],
