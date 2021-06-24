@@ -29,7 +29,11 @@ import { ContratacionDirectaComponent } from './contratacion-directa/contratacio
 
 
 @NgModule({
-    imports: [NgbModule,NgxPaginationModule, ReactiveFormsModule,AngularFileUploaderModule,CommonModule, FormsModule,NgSelectModule,LayoutRoutingModule, TranslateModule, NgbDropdownModule,AutocompleteLibModule],
+    imports: [NgbModule,
+        NgxPaginationModule,
+        ReactiveFormsModule,
+        AngularFileUploaderModule,
+        CommonModule, FormsModule,NgSelectModule,LayoutRoutingModule, TranslateModule, NgbDropdownModule,AutocompleteLibModule],
     declarations: [ContratacionDirectaComponent,AccionCrearComponent,CandidatoComponent,AccionNoAfectaPlanillaComponent,LayoutComponent, CargaManualComponent,SidebarComponent, HeaderComponent, AccionPersonalComponent, CargarHXComponent, DeduccionesComponent],
     providers: [{ provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter },
         {provide: DEFAULT_CURRENCY_CODE, useValue: 'USD'}]
