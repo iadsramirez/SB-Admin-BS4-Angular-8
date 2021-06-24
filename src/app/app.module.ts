@@ -8,15 +8,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 import { LanguageTranslationModule } from './shared/modules/language-translation/language-translation.module';
+import {NgbModule,NgbDate} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+
 
 @NgModule({
-    imports: [
+    imports: [NgbModule,
         CommonModule,
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
         LanguageTranslationModule,
-        AppRoutingModule
+        AppRoutingModule,NgbModule,FormsModule,ReactiveFormsModule, StoreModule.forRoot({}, {})
     ],
     declarations: [AppComponent],
     providers: [AuthGuard],

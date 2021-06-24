@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="card">
+
+        <div class="col-xl-12">
+            <button class="btn btn-primary" (click)="regresar()"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                &nbsp;Regresar
+            </button>
+        </div>
+
+
+        <div class="card-body colorBorder my-4">
+            <div class="col-xl-12 ">
+                <form class="form-inline">
+
+                    <div class="form-group mb-2">
+                        <label for="">Seleccione Accion de Personal</label>&nbsp;
+                        <ng-select [items]="listaTipoAccion" style="width: 400px;" name="accion"
+                            bindLabel="nomTipoaccion" bindValue="tipoAccionPK.codTipoaccion"
+                            [(ngModel)]="tipoAccionSeleccion" (change)="seleccionAccion($event)">
+                        </ng-select>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-12 my-5">
+        &nbsp;
+    </div>
+
+</div>

@@ -5,6 +5,9 @@
 @import 'rtl';
 @import 'responsive';
 
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 @media print {
     .breadcrumb {
         display: none !important;
